@@ -1,0 +1,183 @@
+                                        /*~~~~~ F O N T S ~~~~~*/
+                                        @font-face {
+                                            src: url(fonts/OpenSansCondensed-Bold.ttf);
+                                            font-family: opensansbold;
+                                        }
+                                        @font-face {
+                                            src: url(fonts/OpenSansCondensed-Light.ttf);
+                                            font-family: opensans;
+                                        }
+                                        @font-face {
+                                            src: url(fonts/OpenSansCondensed-LightItalic.ttf);
+                                            font-family: opensansitalic;
+                                        }
+                                        @font-face {
+                                            src: url(fonts/AnticSlab-Regular.ttf);
+                                            font-family: antic;
+                                        }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+html {
+    height: 100vh;
+    margin: 0;
+}
+body { 
+    height: 100%;
+    font-family: opensans;
+    background-color: rgb(233, 203, 203);
+    font-size: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    height: 4vw;
+    width: 50vw;
+    border-style: none;
+    border-radius: 7vh;
+    padding: 5px;
+    text-align: center;
+    font-size: 4vw;
+}
+button {
+    border-style: none;
+    border-radius: 7vh;
+    padding: 5px;
+    width: 40vw;
+    font-size: 4vw;
+    background-color: rgb(255, 255, 255);
+}
+header {
+    margin: 40px;
+    width: 80%;
+}
+.header-wrapper-one {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header-wrapper-two {
+    height: 10vh;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header-wrapper-three {
+    height: 10vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.board-wrapper {
+    display: none;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+}
+.square {
+    background-color: white;
+    height: 70px;    
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    user-select: none;
+    font-size: 10vw;
+    font-family: antic;
+}
+.hover:hover, .start-button:hover {
+    box-shadow: 0px 1px 10px rgba(138, 89, 89, 0.671);
+}
+footer {
+    margin: 30px;
+}
+.new-game {
+    display: none;
+}
+
+.play-again {
+    margin: 15px 0;
+}
+
+.names {
+    font-size: 10vw;
+    font-family: opensansbold;
+}
+.title {
+    font-family: opensansbold;
+    font-size: 12vw;
+}
+.display-winner {
+    font-size: 12vw;
+}
+@media only screen /* iPhone 6, 6S, 7 and 8 */
+  and (min-device-width: 375px) 
+  and (max-device-width: 768px) 
+  and (-webkit-min-device-pixel-ratio: 2)  {
+
+    .square {
+        height: 100px;    
+        width: 100px;
+    }
+    .display-winner {
+        font-size: 6vw;
+    }
+    input {
+        margin: 3vh;
+    }
+  }
+@media only screen /* iPad 3, 4 and Pro 9.7 */
+  and (min-device-width: 768px) 
+  and (max-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 2)  {
+    .square {
+        height: 130px;    
+        width: 130px;
+    }
+    button {
+        margin: 0px 0px 20px 0px;
+        width: 30vw;
+        font-size: 3vw;
+    }
+    .display-winner {
+        font-size: 6vw;
+    }
+    input {
+        margin: 2vh;
+    }
+    header {
+        padding-top: 10vh;
+    }
+  }
+
+@media screen /* Non-Retina Desktop/Laptop */
+  and (min-device-width: 1200px) 
+  and (-webkit-min-device-pixel-ratio: 1)  {
+    .square {
+        height: 150px;    
+        width: 150px;
+    }
+    button {
+        margin: 0px 0px 20px 0px;
+        width: 30vw;
+        font-size: 3vw;
+    }
+    .display-winner {
+        font-size: 6vw;
+    }
+  }
